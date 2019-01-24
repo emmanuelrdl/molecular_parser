@@ -6,9 +6,8 @@ var molecule3 = 'K4[ON(SO3)2]2';
 
 function atomCounter(molecule){
   var splitedMolecule =  molecule.split('');
-  var insertMolecule = [];
+  var insertMolecule  = [];
   formatInsertMolecule(splitedMolecule, insertMolecule);
-  console.log('insertMolecule', insertMolecule)
   var atoms = {}
   insertMolecule.forEach(function(elem, index){
     formatAtomOuput(insertMolecule, elem, index, atoms)
@@ -40,7 +39,6 @@ function formatInsertMolecule(splitedMolecule, insertMolecule){
 }
 
 function formatAtomOuput(insertMolecule, elem, index, atoms){
-  console.log(elem);
   if (elem.length === 1) {
     atoms[elem[0]] = 1;
   } else {
@@ -53,6 +51,6 @@ function formatAtomOuput(insertMolecule, elem, index, atoms){
 
 
 
-// excution
+// execution
 var result = atomCounter(molecule2);
 console.log(result);
